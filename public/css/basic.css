@@ -1,0 +1,304 @@
+/**
+ * Copyright 2014 Rowdy Klijnsmit
+ * Version 1.0
+ * 
+ * ---------------------------------------------------------
+ * Including all the important CSS files
+ * ---------------------------------------------------------
+ * Bootstrap 		version 3.0
+ * Font-Awesome 	version 4.2.0
+ */
+
+ @import '/bootstrap.css';
+ @import '/font-awesome.css';
+
+/**
+ * 
+ * ---------------------------------------------------------
+ * Including all the page CSS files
+ * ---------------------------------------------------------
+ */
+
+ @import 'pages/home.css';
+
+/**
+ * ---------------------------------------------------------
+ * CSS for the Menu
+ * ---------------------------------------------------------
+ */
+
+ #menu {
+ 	position: absolute;
+ 	width: 100%;
+ 	top: 90%;
+ 	z-index: 10;
+ 	color: white;
+ 	font-family: 'Montserrat', sans-serif;
+ 	font-size: 25px;
+ }
+
+ #menu_nav {
+ 	display: table;
+ 	width: 100%;
+ 	height: 75px;
+ }
+
+ #menu ul {
+ 	display: table-cell;
+ 	vertical-align: middle;
+ 	text-align: center;
+ }
+
+ #menu ul li {
+ 	display: inline-block;
+ 	margin-left: 20px;
+ 	cursor: pointer;
+ }
+
+ #menu ul li:first-child {
+ 	margin-left: 0;
+ }
+
+ .f-nav { 
+ 	position: fixed !important;  
+ 	left: 0; 
+ 	right: 0;
+ 	top: 0 !important;
+
+ 	background: #ff554e;
+ }
+
+ .active {
+ 	background: #181a1c;
+ 	color: #fff;
+ 	padding: 37px 25px;
+ 	line-height: 18px;
+ 	text-align: center; 
+ }
+
+/**
+ *
+ * ---------------------------------------------------------
+ * Custom ScrollBar
+ * ---------------------------------------------------------
+ */
+
+ ::-webkit-scrollbar {
+ 	width: 11px;
+ }
+
+ ::-webkit-scrollbar-track { 
+ 	-webkit-border-radius: 10px;
+ 	border-radius: 10px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+ 	-webkit-border-radius: 10px;
+ 	border-radius: 10px;
+ 	background: rgb(255,85,78); 
+ }
+
+ ::-webkit-scrollbar-thumb:window-inactive {
+ 	background-color: #ff554e; 
+ }
+
+
+/**
+ * 
+ * ---------------------------------------------------------
+ * Base CSS of the project
+ * ---------------------------------------------------------
+*/
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 90px;
+	line-height: 76px;
+	font-weight: 700;
+	margin: 0px;
+}
+
+.white {
+	color: white;
+}
+
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 27px;
+	line-height: 30px;
+	padding-bottom: 10px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+ul {
+	padding: 0;
+}
+
+.col-md-12 {
+	padding: 0;
+}
+
+.text-justify {
+	line-height: 30px;
+}
+
+hr {
+	border: solid 3px rgb(255,85,78);
+}
+
+.wBorder {
+	border: solid 3px white !important;	
+}
+
+.alert {
+	margin-bottom: 0;
+}
+
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+}
+
+/**
+ * 
+ * ---------------------------------------------------------
+ * Mobile CSS
+ * ---------------------------------------------------------
+ */
+
+ @media only screen 
+ and (max-width : 960px) {
+
+	/**
+	 * 
+	 * ---------------------------------------------------------
+	 * Mobile 'header' CSS 
+	 * ---------------------------------------------------------
+	*/
+	 .headerText h1 {
+	 	font-size: 	30px;
+	 }
+
+	 .headerText h3 {
+	 	font-size: 23px;	
+	 }
+
+	 .headerText p {
+	 	font-size: 18px;
+	 }
+
+	 .block {
+	 	display: block;	
+	 }
+
+	/**
+	 * 
+	 * ---------------------------------------------------------
+	 * Mobile 'menu' CSS 
+	 * ---------------------------------------------------------
+	*/
+
+	#menu {
+	 	position: absolute;
+	 	width: 100%;
+	 	top: 85%;
+	 	z-index: 10;
+	 	color: white;
+	 	font-family: 'Montserrat', sans-serif;
+	 	font-size: 18px;
+	}
+
+	#menu_nav {
+		height: 75px;
+	}
+
+	/**
+	 * 
+	 * ---------------------------------------------------------
+	 * Mobile 'about' CSS 
+	 * ---------------------------------------------------------
+	*/
+
+	#about {
+		padding-top: 80px;
+		/*padding-bottom: 80px;*/
+	}
+
+	h1 {
+		padding: 0;
+		font-size: 50px;
+	}
+
+	.about-text h3 {
+		font-size: 25px;
+	}
+
+	.about-text h4 {
+		font-size: 18px;
+	}
+
+	.shadowText {
+		font-size: 15px !important;
+	}
+
+	.me-circle {
+		margin-top: 50px;
+	}
+
+
+	/**
+	 * 
+	 * ---------------------------------------------------------
+	 * Mobile 'work' CSS 
+	 * ---------------------------------------------------------
+	*/
+
+	#work {
+	 	padding-top: 80px;
+	 	padding-bottom: 100px;
+	}
+
+	.header {
+		margin-top: 20px;
+	}
+
+	/**
+	 * 
+	 * ---------------------------------------------------------
+	 * Mobile 'contact' CSS 
+	 * ---------------------------------------------------------
+	*/
+
+	#contact {
+		padding-top: 80px;
+	}
+
+	.maps {
+		display: none;
+	}
+
+	/**
+	 * 
+	 * ---------------------------------------------------------
+	 * Mobile 'footer' CSS 
+	 * ---------------------------------------------------------
+	*/
+
+	#footer {
+		width: 100%;
+	}
+
+}
+
+

@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+	RewriteRule ^(public)($|/) - [L]
+
+	RewriteRule ^(.*).(eot|svg|ttf|woff|otf)$ /public/fonts/$1.$2 [L]
+	RewriteRule ^(.*).css$ /public/css/$1.css [L]
+	RewriteRule ^(.*).js$  /public/js/$1.js [L]
+	RewriteRule ^(.*).(jpe?g|gif|png)$ /public/img/$0 [L]
+
+	RewriteCond %{THE_REQUEST} (\s|%20)
+	RewriteRule ^([^\s%20]+)(?:\s|%20)+([^\s%20]+)((?:\s|%20)+.*)$ $1-$2$3 [N,DPI]
+	RewriteRule ^([^\s%20]+)(?:\s|%20)+(.*)$ /$1-$2 [L,R=301,DPI]
+
+	RewriteCond %{REQUEST_URI} !(/$|\.)
+	RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	RewriteRule ^(.*)$ index.php?url=$1 [PT,L]
+</IfModule>

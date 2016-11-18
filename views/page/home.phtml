@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Rowdy Klijnsmit">
+	<meta name="version" content="1.0">
+
+	<title>Home</title>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/basic.css">
+
+	<!-- JavaScript Files -->
+	<script src="/jquery.js"></script>
+	<script src="/bootstrap.js"></script>
+	<script src="/custom.js"></script>
+</head>
+<body>
+	<?php if (isset($_SESSION['email'])): ?>
+		<div class="alert alert-success text-center" >
+			<?php echo $_SESSION['email'] ?>
+			<?php unset($_SESSION['email']) ?>
+		</div>
+	<?php endif ?>
+
+	<!-- Header -->
+	<section id="home" class="col-md-12">
+		<header>
+			<div id="blur"></div>
+			<div class="headerText">
+				<h1><span>Rowdy Klijnsmit</span></h1>
+				<h3>
+					Front-end
+					<span class="block">/ </span>
+					<span class="block">Back-end Developer</span>
+				</h3>
+			</div>
+
+			<nav id="menu">
+				<div class="nav" id="menu_nav">
+					<ul id="clickable">
+						<li data-id="home">Home</li>
+						<li data-id="about">Wie ben ik</li>
+						<li data-id="work">Ervaring</li>
+						<li data-id="contact">Contact</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+	</section>
+
+	<!-- ABOUT -->
+	<section class="col-md-12" id="about">
+		<div class="container">
+			<h1>Wie ben ik</h1>
+			<hr>
+			<div class="col-md-8 about-text">
+                <blockquote>Pasting code from the Internet into production code is like chewing gum found on the street.</blockquote>
+                <p>
+                    Met een Rotterdamse mentaliteit “Niet lullen maar poetsen” probeer ik altijd het beste resultaat te behalen met de nieuwste technieken.
+                    <br><br>
+                    De bovenstaande quote heeft mij erg geholpen tijdens het programmeren. Door onderzoek te doen heb ik veel zelf geleerd. Zomaar code plakken zonder het te ontleden, is niet hoe je leert coderen. Doordat je het zelf schrijft, leer je tenminste wat de code doet en kan!
+                    <br><br>
+                    Zelf ben ik zeer gedreven en enthousiast in Laravel. Dit is een PHP framework wat relatief klein is maar toch veel oplossingen te bieden heeft. De community is zeer enthousiast en samen met een video platform gevuld met meerdere tutorials, is het een succesvol framework om mee te werken.
+                </p>
+			</div>
+			
+			<!-- PICTURE -->
+			<div class="col-md-4 circle me-circle text-center">
+				<img src="me.jpg" class="img-circle">
+			</div>
+		</div>
+
+	</section>
+
+	<!-- WORK -->
+	<section class="col-md-12" id="work">
+		<div class="container white">
+			<h1>Ervaring</h1>
+
+			<hr class="wBorder">
+
+            <div class="row">
+                <div class="col-md-12 project">
+                    <div class="col-md-4">
+                    </div>
+
+                    <div class="col-md-8">
+                        <section class="header">PHP Framework.</section>
+                        <p>
+                            Op school programmeerde wij alles in plain PHP. Zo werdt het ons geleerd zelf vond ik dit altijd chaotisch en onoverzichtelijk. Na vele onderzoeken vond ik aantal frameworks bijv. Codeigniter, Symfony en Laravel.
+                            <br><br>
+                            Door een video tutorial ben ik begonnen met een eigen framework te bouwen, met de intentie om deze uit te breiden als dat nodig zou zijn.
+                            Later begon ik Laravel te begrijpen en was dit meteen mijn favoriet. Sinds de dag van vandaag gebruik ik dit nog steeds.
+                            <br><br>
+                            <span class="text-white"><i>Link:</i> <a href="https://github.com/justkidding96/framework" target="_blank">Github</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="wBorder">
+            <div class="row-eq-height">
+                <div class="col-md-8">
+                    <section class="header">WordPress Maatwerk plug-ins</section>
+                    <p>
+                        Omdat er veel vraag naar WordPress is, heb ik me hier ook in verdiept. Inmiddels heb ik verschillende maatwerk oplossingen gemaakt voor WordPress.
+                        <br><br>
+                        Bijvoorbeeld een geavanceerde configurator voor het maken van een ombouw voor een radiator. Deze configurator is gebaseerd op OOP JavaScript en kan uitgebreid worden met eventuele extra stappen. Ook kan de gebruiker zijn ombouw zien in een gewenste kleur door gebruik te maken van SVG techniek.
+                        <br><br>
+                        Het doel was om een dynamische configurartor te bouwen die beheerd kon worden.
+                        <br>
+                        De gebruiker kan stap voor stap meerdere ombouwen samen stellen. Na het samen stellen kan de gebruiker een offerte aanvragen.
+                        <br><br>
+                        Dit geheel is mobiel vriendelijk i.v.m het stijgende percentage van mobiel gebruik.
+                        <br><br>
+                        <span class="text-white"><i>Link:</i> <a href="http://radiatorombouwopmaat.nl/bereken-uw-prijs" target="_blank">Radiatorombouw op maat</a></span>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="/Radiator.png" alt="Radiatorombouw op maat" class="img-responsive">
+                </div>
+            </div>
+<!--			<hr class="wBorder">-->
+<!--			<div class="row-eq-height">-->
+<!--				<div class="col-md-4">-->
+<!--					<img src="/Radiator.png" alt="Radiatorombouw op maat" class="img-responsive">-->
+<!--				</div>-->
+<!--				<div class="col-md-8">-->
+<!--					<section class="header">WordPress Maatwerk plug-ins</section>-->
+<!--					<p>-->
+<!--						Omdat er veel vraag naar WordPress is, heb ik me hier ook in verdiept. Inmiddels heb ik verschillende maatwerk oplossingen gemaakt voor WordPress.-->
+<!--						<br><br>-->
+<!--						Bijvoorbeeld een geavanceerde configurator voor het maken van een ombouw voor een radiator. Deze configurator is gebaseerd op OOP JavaScript en kan uitgebreid worden met eventuele extra stappen. Ook kan de gebruiker zijn ombouw zien in een gewenste kleur door gebruik te maken van SVG techniek.-->
+<!--						<br><br>-->
+<!--						Het doel was om een dynamische configurartor te bouwen die beheerd kon worden.-->
+<!--						<br>-->
+<!--						De gebruiker kan stap voor stap meerdere ombouwen samen stellen. Na het samen stellen kan de gebruiker een offerte aanvragen.-->
+<!--						<br><br>-->
+<!--						Dit geheel is mobiel vriendelijk i.v.m het stijgende percentage van mobiel gebruik.-->
+<!--						<br><br>-->
+<!--						<span class="text-white"><i>Link:</i> <a href="http://radiatorombouwopmaat.nl/bereken-uw-prijs" target="_blank">Radiatorombouw op maat</a></span>-->
+<!--					</p>-->
+<!--				</div>-->
+<!--			</div>-->
+		</div>
+	</section>
+
+	<section class="col-md-12" id="contact">
+		<div class="container">
+			<h1>Contact</h1>
+			<hr>
+			<div class="row">
+                <h2 class="pull-left">Get in touch me</h2>
+                <div class="pull-left" id="social">
+                    <a href="https://nl.linkedin.com/in/rowdy-klijnsmit-129945b0" target="_blank">
+                        <i class="fa fa-linkedin-square fa-5x"></i>
+                    </a>
+                </div>
+            </div>
+		</div>
+	</section>
+	<section class="col-md-12" id="footer">
+		<span>Copyright <?php echo date('Y') ?> &copy; Rowdy Klijnsmit</span>
+	</section>
+</body>
+</html>
